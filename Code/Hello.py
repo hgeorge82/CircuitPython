@@ -1,29 +1,18 @@
-import board
-import neopixel
 import time
+import board
+import pwmio
+from adafruit_motor import servo
 
+# create a PWMOut object on Pin A2.
+pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
 
-dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
-dot.brightness = 0.1
-
-
+# Create a servo object, my_servo.
+my_servo = servo.Servo(pwm)
 
 while True:
-    print("Make it red!")
-    dot.fill((255 , 0 , 0))
-    time.sleep  (1.5)
-    print("Make it Orange!")
-    dot.fill((255 , 128 , 0))
-    time.sleep (1.5)
-    print("Make it Yellow!")
-    dot.fill((255, 255, 0))
-    time.sleep (1.5)
-    print("Make it Green!")
-    dot.fill((0,173,0))
-    time.sleep (1.5)
-    print("Make it Blue!")
-    dot.fill((0, 191, 255))
-    time.sleep (1.5)
-    print("Make it Purple!")
-    dot.fill((128, 0, 255))
-    time.sleep (1.5)
+    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
+        my_servo.angle = angle
+        time.sleep(0.05)
+    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
+        my_servo.angle = angle
+        time.sleep(0.05)
