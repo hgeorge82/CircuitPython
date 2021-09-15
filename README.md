@@ -49,6 +49,7 @@ while True:
 
 ### Evidence
 ![ServoGif](Images/ServoGif.gif)
+<img src="Images/ServoGif.gif" alt="ServoGif" style="width:500px;">
 
 
 
