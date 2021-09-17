@@ -15,10 +15,28 @@ This repository will actually serve as a aid to help you get started with your o
 ### Description & Code
 Description goes here
 
-Here's how you make code look like code:
+
+### Evidence
+
+
+
+### Wiring
+Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
+Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
+### Reflection
+What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
+
+
+
+
+## CircuitPython_Servo
+
+### Description & Code
+Using a metro board and circuit python I programed a micro servo to turn 0 and 180°.
+
 
 ```python
-Code goes here
 from adafruit_motor import servo
 import time
 import board
@@ -50,32 +68,12 @@ while True:
 ### Evidence
 <img src="Images/ServoGif.gif" alt="ServoGif" style="width:200px;">
 
-
-
 ### Wiring
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+![image](https://user-images.githubusercontent.com/71407017/133789559-d49ee117-f785-4d80-adae-6a994fef2e17.png)
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
+I struggled with my code, but turns out it was just that I wired my servo wrong.
 
-
-
-
-## CircuitPython_Servo
-
-### Description & Code
-
-```python
-Code goes here
-
-```
-
-### Evidence
-
-### Wiring
-
-### Reflection
 
 
 
