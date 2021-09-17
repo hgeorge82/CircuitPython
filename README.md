@@ -33,6 +33,8 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 ## CircuitPython_Servo
 
 ### Description & Code
+Using a metro board and circuit python I programed a micro servo to turn 0 and 180°.
+
 
 ```python
 from adafruit_motor import servo
@@ -70,6 +72,8 @@ while True:
 ![image](https://user-images.githubusercontent.com/71407017/133789559-d49ee117-f785-4d80-adae-6a994fef2e17.png)
 
 ### Reflection
+I struggled with my code, but turns out it was just that I wired my servo wrong.
+
 
 
 
