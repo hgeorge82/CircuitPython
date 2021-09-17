@@ -15,10 +15,7 @@ This repository will actually serve as a aid to help you get started with your o
 ### Description & Code
 Description goes here
 
-Here's how you make code look like code:
-
 ```python
-Code goes here
 from adafruit_motor import servo
 import time
 import board
@@ -55,7 +52,7 @@ while True:
 ### Wiring
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
 Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-![image](https://user-images.githubusercontent.com/71407017/133789380-69ccb914-aa82-4cab-abb8-922291dcb6ee.png)
+![image](https://user-images.githubusercontent.com/71407017/133789559-d49ee117-f785-4d80-adae-6a994fef2e17.png)
 
 
 ### Reflection
