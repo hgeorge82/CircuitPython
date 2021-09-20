@@ -74,6 +74,45 @@ while True:
 ### Reflection
 I struggled with my code, but turns out it was just that I wired my servo wrong.
 
+## CircuitPython Cap touch
+
+### Description & Code
+
+```
+import time
+import board
+import pwmio
+from adafruit_motor import servo
+
+# create a PWMOut object on Pin A2.
+pwm = pwmio.PWMOut(board.A2, frequency=50)
+
+# Create a servo object, my_servo.
+my_servo = servo.ContinuousServo(pwm)
+
+while True:
+    print("forward")
+    my_servo.throttle = 1.0
+    time.sleep(2.0)
+    print("stop")
+    my_servo.throttle = 0.0
+    time.sleep(2.0)
+    print("reverse")
+    my_servo.throttle = -1.0
+    time.sleep(2.0)
+    print("stop")
+    my_servo.throttle = 0.0
+    time.sleep(4.0)
+```
+
+### Evidence
+![image](https://user-images.githubusercontent.com/71407017/134009936-093b8fb5-c762-445b-b3fc-ac347ece4b05.png)
+
+### Wiring
+
+### Reflection
+
+
 
 
 
