@@ -113,6 +113,7 @@ while True:
 ### Wiring
 
 ### Reflection
+This code was pretty easy to get the hang of. I think I got help from Ben, so credits to him for half of my code.
 
 
 
@@ -122,16 +123,62 @@ while True:
 ## CircuitPython_Distance Sensor
 
 ### Description & Code
+This code allows an ultrasonic sensor to fade from from red, to blue, to green when you move your hand or an object in front of it.
 
-```python
+```
+import time
+import board
+import adafruit_hcsr04
+import neopixel
+import simpleio
+
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1, brightness = 0.1)
+
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+cm = 0
+
+while True:
+    try:
+        cm = sonar.distance
+        print((cm,))
+        if cm < 5:
+            print("Red")
+            r = 209
+            g = 0
+            b = 0
+
+
+        elif cm < 20:
+            print("not red")
+            r = int(simpleio.map_range(cm, 5, 20, 209, 0))
+            g = 0
+            b = int(simpleio.map_range(cm, 5, 20, 0, 209))
+
+        elif cm > 20:
+            print("not red or blue")
+            r = 0
+            g = int(simpleio.map_range(cm, 20, 35, 0, 209))
+            b = int(simpleio.map_range(cm, 20, 35, 209, 0))
+
+
+        dot.fill((r, g, b))
+
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.1)
 
 ```
 
 ### Evidence
-
+![image](https://user-images.githubusercontent.com/71342179/134684788-f7e1d759-809d-495a-a70a-fc5cefa11928.gif)
+Credits to - Jai Aust
 ### Wiring
+![IMG-5096 (1)](https://user-images.githubusercontent.com/71407017/137370846-e097dd48-1cbc-41f0-a3f5-cc59b39618fc.JPG)
+
 
 ### Reflection
+The hardest part about this was getting the colors to fade. I was confused on the distance and how to incorporate it into code.
 
 
 
